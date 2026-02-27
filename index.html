@@ -1,0 +1,222 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ruba — UI & UX Designer</title>
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700;800&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="css/00-root.css" />
+  <link rel="stylesheet" href="css/01-nav.css" />
+  <link rel="stylesheet" href="css/02-hero.css" />
+  <link rel="stylesheet" href="css/03-about.css" />
+  <link rel="stylesheet" href="css/04-projects.css" />
+  <link rel="stylesheet" href="css/06-footer.css" />
+  <link rel="stylesheet" href="css/07-responsive.css" />
+</head>
+
+<body>
+  <div class="page">
+
+    <!-- NAV -->
+    <header class="navWrap reveal" data-delay="1">
+      <nav class="navPill" aria-label="Primary">
+        <button class="langBtn" type="button">EN</button>
+
+        <div class="logoBubble" aria-label="Logo">
+          <img class="siteLogoImg" src="assets/logo.png" alt="Logo" />
+        </div>
+
+        <div class="navLinks" role="navigation">
+          <a class="navLink" href="#home">Home</a>
+          <a class="navLink" href="#about">About</a>
+          <a class="navLink" href="#projects">Projects</a>
+        </div>
+      </nav>
+    </header>
+
+    <!-- HERO -->
+    <main class="hero" id="home">
+      <section class="heroText reveal" data-delay="1">
+        <p class="smallHi">Hi I am</p>
+        <p class="name">Ruba Alghamdi</p>
+
+        <h1 class="title">
+          UI &amp; UX<br />
+          <span>Designer</span>
+        </h1>
+
+        <p class="desc">
+          I design clean, friendly digital experiences and bring them to life with front-end code.
+          I care about accessibility, smooth interactions, and modern web/app UI.
+        </p>
+
+        <!--<a class="cta" href="#projects">Hire Me</a>-->
+      </section>
+
+      <section class="heroArt reveal" data-delay="2">
+        <div class="artCard">
+          <div class="sunMoonWrap"
+               id="themeToggle"
+               role="switch"
+               tabindex="0"
+               aria-checked="false"
+               aria-label="Toggle theme">
+
+            <!-- stars layer -->
+            <div class="stars" aria-hidden="true">
+  <span></span><span></span><span></span><span></span><span></span>
+  <span></span><span></span><span></span><span></span><span></span>
+  <span></span><span></span>
+</div>
+
+            <!-- single sun/moon element -->
+            <div class="sunMoon" aria-hidden="true">
+              <div class="crescent" aria-hidden="true"></div>
+            </div>
+
+            <p class="toggleHint"></p>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- ABOUT -->
+    <section class="about reveal" id="about">
+      <div class="aboutGrid">
+
+        <div class="aboutLeft reveal" data-delay="1">
+          <h2 class="sectionTitle">About Me</h2>
+
+          <p class="aboutText">
+            I’m Ruba, a Computer Science graduate based in Saudi Arabia.
+            I work across UI/UX, prototyping, and front-end implementation.
+            I enjoy building calm, clear experiences — especially accessibility-focused products.
+          </p>
+
+          <a class="cta cvBtn" href="assets/RubaAlghamdiCV.pdf" download>Download CV</a>
+        </div>
+
+        <div class="aboutRight">
+          <div class="skill reveal" data-delay="1">
+            <p class="skillLabel">UX / UI</p>
+            <div class="bar"><span class="fill" data-level="100"></span></div>
+          </div>
+
+          <div class="skill reveal" data-delay="2">
+            <p class="skillLabel">Web Developer</p>
+            <div class="bar"><span class="fill" data-level="82"></span></div>
+          </div>
+
+          <div class="skill reveal" data-delay="3">
+            <p class="skillLabel">App Design</p>
+            <div class="bar"><span class="fill" data-level="92"></span></div>
+          </div>
+
+          <div class="skill reveal" data-delay="4">
+            <p class="skillLabel">Graphic Design</p>
+            <div class="bar"><span class="fill" data-level="100"></span></div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- PROJECTS -->
+    <section class="projects" id="projects">
+      <div class="projectsHead reveal">
+        <h2 class="sectionTitle center">My Projects</h2>
+        <p class="projectsSub">
+          Selected work across UI/UX, web pages, app concepts, and visual systems.
+        </p>
+
+        <div class="filters" role="tablist" aria-label="Project Filters">
+          <button class="pill isActive" data-filter="all" type="button">All</button>
+          <button class="pill" data-filter="web" type="button">Web</button>
+          <button class="pill" data-filter="app" type="button">App</button>
+          <!--<button class="pill" data-filter="design" type="button">Design</button>-->
+        </div>
+      </div>
+
+      <div class="projectsGrid">
+        <article class="projectCard reveal" data-delay="1" data-cat="app">
+          <div class="cardTop">
+            <img class="projectImg" src="assets/p1.png" alt="Sarf Wallet screens" />
+          </div>
+          <div class="cardBar">
+            <div class="cardInfo">
+              <h3 class="cardTitle">Login/Signup</h3>
+              <p class="cardDesc">Login screens + onboarding concept.</p>
+            </div>
+          </div>
+        </article>
+
+        <article class="projectCard reveal" data-delay="2" data-cat="app">
+          <div class="cardTop">
+            <img class="projectImg" src="assets/p2.png" alt="Book App screens" />
+          </div>
+          <div class="cardBar">
+            <div class="cardInfo">
+              <h3 class="cardTitle">Card Match Game</h3>
+              <p class="cardDesc">Minimal card matching game UI.</p>
+            </div>
+          </div>
+        </article>
+
+        <article class="projectCard reveal" data-delay="3" data-cat="app">
+          <div class="cardTop">
+            <img class="projectImg" src="assets/p3.png" alt="Portfolio screens" />
+          </div>
+          <div class="cardBar">
+            <div class="cardInfo">
+              <h3 class="cardTitle">Bakery App</h3>
+              <p class="cardDesc">Creative Bakery app UX/UI.</p>
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="siteFooter reveal">
+      <div class="footerInner">
+        <p class="footerLeft">Ruba Alghamdi</p>
+
+        <div class="footerLogo" aria-label="Logo">
+          <img class="footerLogoImg" src="assets/logo.png" alt="Logo" />
+        </div>
+
+        <div class="footerIcons">
+          <a class="iconBtn" href="mailto:rub.gmd23@gmail.com" aria-label="Email">
+            <svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true">
+              <path fill="currentColor" d="M20 4H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2zm0 4-8 5L4 8V6l8 5 8-5v2z"/>
+            </svg>
+          </a>
+
+          <a class="iconBtn" href="https://www.linkedin.com/in/ruba-alghamdi-a92981314" aria-label="LinkedIn">
+            <svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true">
+              <path fill="currentColor" d="M4.98 3.5C4.98 4.88 3.87 6 2.5 6S0 4.88 0 3.5 1.11 1 2.48 1c1.38 0 2.5 1.12 2.5 2.5zM0.5 23.5h4V7.98h-4V23.5zM8 7.98h3.83v2.12h.05c.53-1 1.84-2.12 3.78-2.12 4.04 0 4.79 2.66 4.79 6.12v9.4h-4v-8.33c0-1.99-.04-4.56-2.78-4.56-2.78 0-3.2 2.17-3.2 4.42v8.47H8V7.98z"/>
+            </svg>
+          </a>
+
+          <a class="iconBtn" href="https://github.com/ruba-gh" aria-label="GitHub">
+            <svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true">
+              <path fill="currentColor" d="M12 .5C5.73.5.75 5.64.75 12c0 5.12 3.29 9.47 7.86 11 .58.11.79-.26.79-.57v-2.2c-3.2.71-3.87-1.58-3.87-1.58-.53-1.37-1.29-1.73-1.29-1.73-1.05-.74.08-.73.08-.73 1.16.08 1.77 1.22 1.77 1.22 1.03 1.8 2.7 1.28 3.36.98.1-.77.4-1.28.73-1.58-2.55-.3-5.23-1.3-5.23-5.78 0-1.28.45-2.33 1.18-3.15-.12-.3-.51-1.53.11-3.18 0 0 .97-.32 3.18 1.2.92-.26 1.9-.39 2.88-.39.98 0 1.96.13 2.88.39 2.21-1.52 3.18-1.2 3.18-1.2.62 1.65.23 2.88.11 3.18.73.82 1.18 1.87 1.18 3.15 0 4.5-2.69 5.47-5.25 5.77.41.36.78 1.08.78 2.18v3.23c0 .32.21.69.79.57 4.57-1.53 7.86-5.88 7.86-11C23.25 5.64 18.27.5 12 .5z"/>
+            </svg>
+          </a>
+        </div>
+      </div>
+    </footer>
+
+    <div class="thinFooterLine reveal" data-delay="2"></div>
+
+    <!-- Load page scripts -->
+    <script src="script.js"></script>
+
+  </div>
+</body>
+</html>

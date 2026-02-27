@@ -1,0 +1,40 @@
+/* Responsive */
+@media (max-width: 1000px){
+  .projectsGrid{
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 900px){
+  .hero{
+    grid-template-columns:1fr;
+    margin-top:40px;
+  }
+  .title{ font-size:58px; }
+  .heroArt{ justify-content:flex-start; }
+
+  .aboutGrid{
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+  .sectionTitle{ font-size: 44px; }
+  .skillLabel{ font-size: 22px; }
+  .bar{ height: 26px; }
+
+  .finalGrid{
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+  .finalRight{
+    align-items:flex-start;
+  }
+  .finalTitle{ font-size: 48px; }
+}
+
+@media (max-width: 650px){
+  .projectsGrid{ grid-template-columns: 1fr; }
+  .projectImg{ transform: rotate(-4deg); }
+  .row2{ grid-template-columns: 1fr; }
+}
+
+/* Contact styles removed (contact section deleted from HTML) */

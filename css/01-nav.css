@@ -1,0 +1,149 @@
+/* NAV */
+.navWrap{
+  padding-top: 0px;
+  position: sticky;
+  top: 28px; /* move the sticky pill down a bit */
+  margin: 8px auto; /* vertical spacing and center horizontally */
+  z-index: 50;
+  backdrop-filter: blur(10px);
+  border-radius: 16px;
+  /* add a subtle stroke around the nav container */
+  border: 1px solid var(--border);
+  background: transparent;
+  padding: 6px 0; /* allow some breathing room for the inner content */
+  width: min(1100px, 92%);
+}
+
+.navPill{
+  /* pill styling cancelled: keep layout but make it flat/transparent */
+  position: relative;
+  height: 78px;
+  background: transparent;
+  border: 0;
+  border-radius: 0;
+  width: min(1100px, 92%);
+  margin: 0 auto;
+
+  display: grid;
+  grid-template-columns: 120px 1fr 420px;
+  align-items: center;
+
+  padding: 0 22px;
+  box-shadow: none;
+}
+
+body.dark .navPill{
+  /* keep dark mode flat as well */
+  background: transparent;
+  border: 0;
+  box-shadow: none;
+}
+
+.langBtn{
+  justify-self: start;
+  border: 0;
+  background: transparent;
+  font-weight: 600;
+  letter-spacing: .5px;
+  font-size: 16px;
+  color: var(--text);
+  cursor: pointer;
+  padding: 10px 12px;
+  border-radius: 999px;
+}
+
+.langBtn:hover{
+  background: color-mix(in srgb, var(--pink-2) 10%, transparent);
+}
+
+.logoBubble{
+  /* larger bubble in the center grid column so right-hand links sit to its right */
+  position: relative;
+  justify-self: center;
+  width: 100px;
+  height: 100px;
+  border-radius: 999px;
+  background: #fff;
+  display: grid;
+  place-items: center;
+  box-shadow: 0 12px 30px rgba(0,0,0,.08);
+  border: 1px solid rgba(0,0,0,.06);
+  align-self: center; /* vertically center the bubble inside the pill */
+  transform: translateY(-10px); /* lift the bubble up a bit */
+  z-index: 3; /* sit above the pill */
+  transition: transform .18s ease;
+}
+
+body.dark .logoBubble{
+  /* make the bubble solid in dark mode (not see-through) */
+  background: #ffd2ea92;
+  border-color: rgba(0,0,0,.06);
+}
+
+.siteLogoImg{
+  width: 70px;
+  height: 70px;
+  object-fit: contain;
+  display: block;
+  opacity: .95;
+}
+
+.navLinks{
+  justify-self: end;
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  padding-right: 4px;
+}
+
+.navLink{
+  position: relative;
+  text-decoration: none;
+  color: var(--text);
+  font-weight: 500;
+  font-size: 16px;
+  padding: 10px 10px;
+  border-radius: 999px;
+  opacity: .92;
+}
+
+.navLink:hover{
+  background: color-mix(in srgb, var(--pink-2) 10%, transparent);
+}
+
+.navLink::after{
+  content:"";
+  position:absolute;
+  left: 12px;
+  right: 12px;
+  bottom: 6px;
+  height: 2px;
+  border-radius: 999px;
+  background: var(--pink-2);
+  transform: scaleX(0);
+  transform-origin: center;
+  transition: transform .18s ease;
+}
+
+.navLink:hover::after{
+  transform: scaleX(1);
+}
+
+@media (max-width: 900px){
+  .navPill{
+    grid-template-columns: 92px 1fr 1fr;
+    height: 74px;
+  }
+  .navLinks{
+    gap: 10px;
+  }
+  .navLink{
+    font-size: 14px;
+    padding: 10px 8px;
+  }
+}
+
+@media (max-width: 650px){
+  .navLinks{ display:none; }
+  .navPill{ grid-template-columns: 120px 1fr; }
+}

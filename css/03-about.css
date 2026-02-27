@@ -1,0 +1,62 @@
+/* ABOUT SECTION */
+.about{ padding: 90px 0; }
+
+.aboutGrid{
+  display:grid;
+  grid-template-columns: 1.1fr .9fr;
+  gap: 60px;
+  align-items: start;
+}
+
+.sectionTitle{
+  font-family: "Playfair Display", serif;
+  font-size: 54px;
+  margin: 0 0 26px;
+  letter-spacing:-0.5px;
+}
+
+.sectionTitle.center{ text-align:center; }
+
+.aboutText{
+  color: var(--muted);
+  font-weight: 300;
+  font-size: 20px;
+  line-height: 2;
+  max-width: 520px;
+  margin: 0 0 34px;
+}
+
+.cvBtn{ padding: 0 40px; }
+
+/* Skills */
+.aboutRight{ padding-top: 10px; }
+
+.skill{ margin-bottom: 34px; }
+
+.skillLabel{
+  margin: 0 0 10px;
+  font-size: 26px;
+  font-weight: 400;
+  color: var(--text);
+  /* background: color-mix(in srgb, var(--pink-1) 70%, white); */
+}
+
+.bar{
+  height: 30px;
+  border-radius: 999px;
+  background: color-mix(in srgb, #ffe0f0 50%, transparent);
+  position: relative;
+  overflow: hidden;
+}
+
+.bar.outline{
+  background: transparent;
+  border: 2px solid var(--pink-2);
+}
+
+.fill{
+  position:absolute;
+  left:0; top:0; bottom:0;
+  border-radius: 999px;
+  background: linear-gradient(90deg, #ffb6de, var(--pink-2));
+}

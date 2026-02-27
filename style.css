@@ -1,0 +1,71 @@
+
+
+/* =========================
+   GLOBAL TRANSITIONS
+========================= */
+body,
+footer,
+header,
+.projectCard,
+.pill,
+button,
+a {
+  transition:
+    background-color var(--transition-speed) ease,
+    color var(--transition-speed) ease,
+    border-color var(--transition-speed) ease,
+    box-shadow var(--transition-speed) ease;
+}
+/* Smooth theme fade overlay */
+.themeOverlay{
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  background: var(--bg);
+  opacity: 0;
+  transition: opacity 260ms ease;
+  z-index: 9999;
+}
+
+.themeOverlay.isOn{
+  opacity: 1;
+}
+
+/* Smooth background + text */
+body {
+  background: var(--bg);
+  color: var(--text);
+}
+
+/* =========================
+   FOOTER FIX
+========================= */
+footer {
+  background: var(--bg);
+  border-top: 1px solid var(--ink-weak);
+}
+
+.footerIcon {
+  background: var(--ink-weak);
+  color: var(--text);
+  transition: background 300ms ease, color 300ms ease;
+}
+
+.footerIcon:hover {
+  background: var(--accent);
+  color: white;
+}
+/* =========================
+   SCROLL REVEAL
+========================= */
+
+.reveal {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 600ms ease, transform 600ms ease;
+}
+
+.reveal.visible {
+  opacity: 1;
+  transform: translateY(0);
+}

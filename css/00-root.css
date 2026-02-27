@@ -1,0 +1,165 @@
+/* =========================
+   TOKENS (ONE PLACE ONLY)
+========================= */
+:root{
+  --bg:#ffffff;
+  --text:#111111;
+  --muted:#666666;
+
+  --pink-1:#ffd2ea;
+  --pink-2:#ff5fb8;
+
+  --card:#ffffff;
+  --border:#e7e7e7;
+
+  --accent:#ff5fb72d;      /* your button pink */
+  --transition-speed: 400ms;
+}
+
+body.dark{
+  --bg:#12040b;
+  --text:#f7f2f5;
+  --muted:#d3b8c6;
+
+  --pink-1:#2b0f1d;
+  --pink-2:#ffd2ea;
+
+  --card: rgba(255,255,255,.06);
+  --border: rgba(255,255,255,.14);
+}
+
+/* The button itself */
+.iconBtn{
+  background: var(--iconBtn-bg);
+  color: var(--iconBtn-fg);
+
+  border: 0;
+  display: grid;
+  place-items: center;
+
+  width: 44px;
+  height: 44px;
+  border-radius: 14px;
+}
+
+/* IMPORTANT: make SVG follow the button color */
+.iconBtn svg{
+  width: 20px;
+  height: 20px;
+  fill: currentColor;
+  stroke: currentColor;
+}
+
+
+/* Hover */
+.iconBtn:hover{
+  background: var(--iconBtn-bg-hover);
+  color: var(--iconBtn-fg-hover);
+}
+
+*{ box-sizing:border-box; }
+html,body{ height:100%; }
+body{
+  margin:0;
+  background:var(--bg);
+  color:var(--text);
+  font-family:Poppins, system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+}
+
+.page{
+  width:min(1100px, 92%);
+  margin:0 auto;
+  padding:24px 0 60px;
+}
+
+section{ scroll-margin-top: 110px; }
+:root{
+  --bg:#ffffff;
+  --text:#111111;
+  --muted:#8a8a8a;
+
+  --pink-1:#ffd2ea;
+  --pink-2:#ff5fb8;
+
+  --card: #ffffff;
+  --border: #e7e7e7;
+}
+
+/* Dark mode overrides */
+body.dark{
+  /* very dark pink / plum base */
+  --bg:#12040b;
+  --text:#f7f2f5;
+  --muted:#d3b8c6;
+
+  /* your brand pinks, tuned for dark */
+  --pink-1:#2b0f1d;    /* deep rose background */
+  --pink-2:#ff5fb8;
+
+  --card: rgba(255,255,255,.06);
+  --border: rgba(255,255,255,.14);
+
+  /* NEW: shared “ink” for buttons/icons */
+  --ink: rgba(255,255,255,.82);
+  --ink-weak: rgba(255,255,255,.12);
+}
+/* =========================
+   REVEAL (float-in on scroll)
+========================= */
+.reveal{
+  opacity: 0;
+  transform: translateY(18px);
+  filter: blur(6px);
+  transition:
+    opacity 700ms cubic-bezier(.2,.9,.2,1),
+    transform 700ms cubic-bezier(.2,.9,.2,1),
+    filter 700ms cubic-bezier(.2,.9,.2,1);
+  will-change: opacity, transform, filter;
+}
+
+.reveal.visible{
+  opacity: 1;
+  transform: translateY(0);
+  filter: blur(0);
+}
+
+/* Stagger helpers (optional) */
+.reveal[data-delay="1"]{ transition-delay: 80ms; }
+.reveal[data-delay="2"]{ transition-delay: 160ms; }
+.reveal[data-delay="3"]{ transition-delay: 240ms; }
+.reveal[data-delay="4"]{ transition-delay: 320ms; }
+
+/* =========================
+   SKILL BAR ANIMATION
+========================= */
+.bar .fill{
+  width: 0;                 /* start empty */
+  transition: width 900ms cubic-bezier(.2,.9,.2,1);
+}
+
+/* a tiny shine when it fills (optional) */
+.bar .fill::after{
+  content:"";
+  display:block;
+  height:100%;
+  width:100%;
+  background: linear-gradient(90deg, transparent, rgba(255,255,255,.35), transparent);
+  transform: translateX(-60%);
+  opacity: .55;
+}
+
+/* animate the shine only when filling */
+.skillBarsOn .bar .fill::after{
+  animation: barShine 900ms ease 200ms 1;
+}
+
+@keyframes barShine{
+  from{ transform: translateX(-60%); }
+  to{ transform: translateX(60%); }
+}
+
+/* Respect reduced motion */
+@media (prefers-reduced-motion: reduce){
+  .reveal{ transition: none; filter:none; transform:none; opacity:1; }
+  .bar .fill{ transition: none; width: auto; }
+}
