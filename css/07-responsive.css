@@ -44,3 +44,107 @@
     height: 48px;
   }
 }
+/* =========================
+   MOBILE NAV COMPACT
+========================= */
+@media (max-width: 520px){
+
+  .navWrap{
+    top: 10px;          /* less sticky offset */
+    padding: 4px 0;
+    border-radius: 14px;
+  }
+
+  .navPill{
+    height: 56px;       /* smaller */
+    padding: 0 14px;
+    grid-template-columns: 70px 1fr; /* EN + center */
+  }
+
+  .langBtn{
+    font-size: 14px;
+    padding: 8px 10px;
+  }
+
+  .logoBubble{
+    width: 62px;
+    height: 62px;
+    transform: translateY(-6px); /* smaller lift */
+    box-shadow: 0 10px 22px rgba(0,0,0,.08);
+  }
+
+  .siteLogoImg{
+    width: 42px;
+    height: 42px;
+  }
+
+  /* =========================
+     MOBILE FOOTER COMPACT
+  ========================= */
+  .siteFooter{
+    margin-top: 18px;
+    padding: 4px 0;
+    border-radius: 14px;
+  }
+
+  .footerInner{
+    padding: 12px 14px;
+    gap: 10px;
+  }
+
+  .footerLogoImg{
+    width: 40px;
+    height: 40px;
+  }
+
+  .footerIcons{
+    gap: 10px;
+  }
+
+  .footerIcons .iconBtn{
+    width: 44px;
+    height: 44px;
+  }
+
+  .footerIcons .iconBtn svg{
+    width: 20px;
+    height: 20px;
+  }
+
+  .thinFooterLine{
+    margin-top: 12px;
+  }
+}
+/* =========================
+   PROJECTS: FORCE 2 COLUMNS ON PHONE
+========================= */
+@media (max-width: 650px){
+  .projectsGrid{
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 18px;
+  }
+
+  .cardTop{
+    min-height: 180px;
+  }
+
+  .projectImg{
+    width: 92%;
+    transform: rotate(-4deg);
+  }
+
+  .cardBar{
+    height: 64px;
+    padding: 0 12px;
+  }
+
+  .cardTitle{ font-size: 16px; }
+  .cardDesc{ font-size: 12px; }
+}
+
+/* Optional: on very small phones switch to 1 column */
+@media (max-width: 380px){
+  .projectsGrid{
+    grid-template-columns: 1fr;
+  }
+}
