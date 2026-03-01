@@ -1,6 +1,4 @@
-/* PROJECTS */
 .projects{ padding: 90px 0 120px; }
-
 .projectsHead{ text-align:center; }
 
 .projectsSub{
@@ -27,25 +25,20 @@
   border-radius:999px;
   background: transparent;
   border: 2px solid var(--pink-2);
-  color: var(--text); 
+  color: var(--text);
   font-size: 20px;
   font-weight:600;
   cursor:pointer;
   transition: transform .15s ease, background .15s ease, color .15s ease;
 }
-
 .pill:hover{ transform: translateY(-2px); }
+.pill.isActive{ background: var(--pink-2); color:#fff; }
 
-.pill.isActive{
-  background: var(--pink-2);
-  color:#fff;
-}
-
-/* Grid */
+/* Grid (tight + responsive) */
 .projectsGrid{
   display:grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 44px;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: clamp(18px, 3vw, 44px);
   align-items: start;
 }
 
@@ -79,14 +72,10 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 0 18px; /* allow text to wrap comfortably on narrow cards */
+  padding: 0 18px;
 }
 
-.cardInfo{
-  margin: 0;
-  text-align: center;
-  color: var(--text);
-}
+.cardInfo{ text-align: center; color: var(--text); }
 
 .cardTitle{
   margin: 0 0 6px;
@@ -100,33 +89,4 @@
   font-weight:300;
   font-size: 14px;
   line-height: 1.6;
-}
-
-/* Responsive adjustments */
-@media (max-width: 900px) {
-  .projectsGrid{
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: 32px;
-  }
-  .cardBar{
-    height: 68px;
-    padding: 0 16px;
-  }
-  .cardTitle{ font-size: 18px; }
-  .cardDesc{ font-size: 13px; }
-  .projectImg{ width: min(220px, 90%); }
-}
-
-@media (max-width: 480px) {
-  .projectsGrid{
-    grid-template-columns: 1fr;
-    gap: 24px;
-  }
-  .cardBar{
-    height: 64px;
-    padding: 0 14px;
-  }
-  .cardTitle{ font-size: 16px; }
-  .cardDesc{ font-size: 12px; }
-  .projectImg{ width: min(200px, 90%); }
 }

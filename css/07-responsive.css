@@ -1,17 +1,15 @@
-/* Responsive */
-@media (max-width: 1000px){
-  .projectsGrid{
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-  }
-}
-
 @media (max-width: 900px){
-  .hero{
-    grid-template-columns:1fr;
-    margin-top:40px;
+  .navPill{
+    grid-template-columns: 92px 1fr 1fr;
+    height: 74px;
   }
-  .title{ font-size:58px; }
-  .heroArt{ justify-content:flex-start; }
+  .navLinks{ gap: 10px; }
+  .navLink{ font-size: 14px; padding: 10px 8px; }
+
+  .hero{
+    grid-template-columns: 1fr;
+  }
+  .heroArt{ justify-content: flex-start; }
 
   .aboutGrid{
     grid-template-columns: 1fr;
@@ -21,20 +19,28 @@
   .skillLabel{ font-size: 22px; }
   .bar{ height: 26px; }
 
-  .finalGrid{
+  .footerInner{
     grid-template-columns: 1fr;
-    gap: 40px;
+    text-align: center;
+    height: auto;
+    padding: 18px 22px;
+    gap: 14px;
   }
-  .finalRight{
-    align-items:flex-start;
-  }
-  .finalTitle{ font-size: 48px; }
+  .footerLeft{ justify-self: center; }
+  .footerIcons{ justify-self: center; }
 }
 
 @media (max-width: 650px){
-  .projectsGrid{ grid-template-columns: 1fr; }
+  .navLinks{ display:none; }
+  .navPill{ grid-template-columns: 120px 1fr; }
+
   .projectImg{ transform: rotate(-4deg); }
-  .row2{ grid-template-columns: 1fr; }
 }
 
-/* Contact styles removed (contact section deleted from HTML) */
+@media (max-width: 480px){
+  .footerIcons{ gap: 12px; }
+  .footerIcons .iconBtn{
+    width: 48px;
+    height: 48px;
+  }
+}
