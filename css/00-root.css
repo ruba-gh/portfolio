@@ -17,6 +17,44 @@
 
   --transition-speed: 420ms;
 }
+html[dir="rtl"] {
+  direction: rtl;
+}
+
+html[dir="rtl"] .navLinks {
+  flex-direction: row-reverse;
+}
+
+html[dir="rtl"] .hero {
+  text-align: right;
+}
+
+html[dir="rtl"] .aboutText {
+  text-align: right;
+}
+
+html[dir="rtl"] .projectsHead {
+  text-align: center; /* keep centered */
+}
+:root {
+  --font-display-en: "Playfair Display", serif;
+  --font-display-ar: "Cairo", sans-serif;
+}
+
+.title {
+  font-family: var(--font-display-en);
+}
+
+.sectionTitle {
+  font-family: var(--font-display-en);
+}
+html[dir="rtl"] .title {
+  font-family: var(--font-display-ar);
+}
+
+html[dir="rtl"] .sectionTitle {
+  font-family: var(--font-display-ar);
+}
 
 body.dark{
   --bg:#12040b;
@@ -107,3 +145,4 @@ a{
 @media (prefers-reduced-motion: reduce){
   .reveal{ transition:none; filter:none; transform:none; opacity:1; }
 }
+

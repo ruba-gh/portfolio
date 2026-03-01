@@ -120,3 +120,145 @@ if (aboutSection) {
 document.querySelectorAll(".projectsGrid .reveal").forEach((el, i) => {
   el.style.transitionDelay = `${i * 90}ms`;
 });
+
+// =====================================
+// LANGUAGE TOGGLE (EN ↔ AR)
+// =====================================
+const translations = {
+  en: {
+    // meta
+    "meta.title": "Ruba's Portfolio",
+
+    // nav
+    "nav.home": "Home",
+    "nav.about": "About",
+    "nav.projects": "Projects",
+
+    // hero
+    "hero.hi": "Hi I am",
+    "hero.name": "Ruba Alghamdi",
+    "hero.titleTop": "UI & UX",
+    "hero.titleBottom": "Designer",
+    "hero.desc":
+      "I design clean, friendly digital experiences and bring them to life with front-end code. I care about accessibility, smooth interactions, and modern web/app UI.",
+    "hero.toggleHint": "Tap to switch theme",
+
+    // about
+    "about.title": "About Me",
+    "about.text":
+      "I’m Ruba, a Computer Science graduate based in Saudi Arabia. I work across UI/UX, prototyping, and front-end implementation. I enjoy building calm, clear experiences.",
+    "about.cv": "Download CV",
+
+    // skills
+    "skills.uiux": "UX / UI",
+    "skills.web": "Web Developer",
+    "skills.app": "App Design",
+    "skills.graphic": "Graphic Design",
+
+    // projects
+    "projects.title": "My Projects",
+    "projects.sub": "Selected work across UI/UX, app concepts, and visual systems.",
+    "projects.filter.all": "All",
+    "projects.filter.web": "Web",
+    "projects.filter.app": "App",
+
+    "projects.cards.p1.title": "Login/Signup",
+    "projects.cards.p1.desc": "Login screens + onboarding concept.",
+    "projects.cards.p2.title": "Card Match Game",
+    "projects.cards.p2.desc": "Minimal card matching game UI.",
+    "projects.cards.p3.title": "Bakery App",
+    "projects.cards.p3.desc": "Creative Bakery app UX/UI.",
+
+    // footer
+    "footer.name": "Ruba Alghamdi"
+  },
+
+  ar: {
+    // meta
+    "meta.title": "ملف أعمال ربى",
+
+    // nav
+    "nav.home": "الرئيسية",
+    "nav.about": "نبذة عني",
+    "nav.projects": "المشاريع",
+
+    // hero
+    "hero.hi": "مرحباً، أنا",
+    "hero.name": "ربى الغامدي",     // إذا تبين الاسم يبقى إنجليزي: خليها "Ruba Alghamdi"
+    "hero.titleTop": "UI & UX",
+    "hero.titleBottom": "مصممة",
+    "hero.desc":
+      "أصمم تجارب رقمية بسيطة وودية وأحولها إلى واقع باستخدام الواجهة الأمامية. أهتم بسهولة الاستخدام، والحركات السلسة، وتصميم واجهات حديثة.",
+    "hero.toggleHint": "اضغط",
+
+    // about
+    "about.title": "من أنا",
+    "about.text":
+      "أنا ربى، خريجة علوم حاسب من المملكة العربية السعودية. أعمل في تصميم تجربة وواجهة المستخدم بالإضافة إلى تنفيذ الواجهات الأمامية. أحب بناء تجارب هادئة وواضحة.",
+    "about.cv": "تحميل السيرة الذاتية",
+
+    // skills
+    "skills.uiux": "تجربة وواجهة المستخدم",
+    "skills.web": "تطوير الويب",
+    "skills.app": "تصميم التطبيقات",
+    "skills.graphic": "تصميم جرافيك",
+
+    // projects
+    "projects.title": "أعمالي",
+    "projects.sub": "مختارات من أعمالي في UI/UX، أفكار التطبيقات، والأنظمة البصرية.",
+    "projects.filter.all": "الكل",
+    "projects.filter.web": "ويب",
+    "projects.filter.app": "تطبيقات",
+
+    "projects.cards.p1.title": "تسجيل الدخول / إنشاء حساب",
+    "projects.cards.p1.desc": "شاشات تسجيل دخول + فكرة تعريفيّة.",
+    "projects.cards.p2.title": "لعبة مطابقة البطاقات",
+    "projects.cards.p2.desc": "واجهة لعبة مطابقة بسيطة.",
+    "projects.cards.p3.title": "تطبيق مخبز",
+    "projects.cards.p3.desc": "تجربة وتصميم واجهات لتطبيق مخبز.",
+
+    // footer
+    "footer.name": "ربى الغامدي"
+  }
+};
+
+
+
+const langToggle = document.getElementById("langToggle");
+
+function setLanguage(lang) {
+  document.documentElement.lang = lang;
+
+  // direction switch
+  if (lang === "ar") {
+    document.documentElement.dir = "rtl";
+  } else {
+    document.documentElement.dir = "ltr";
+  }
+
+  // translate text
+  document.querySelectorAll("[data-i18n]").forEach((el) => {
+    const key = el.dataset.i18n;
+    if (translations[lang][key]) {
+      el.textContent = translations[lang][key];
+    }
+  });
+
+  // change button text
+  langToggle.textContent = lang === "ar" ? "EN" : "AR";
+
+  localStorage.setItem("lang", lang);
+}
+
+// Load saved language
+(function initLanguage() {
+  const savedLang = localStorage.getItem("lang") || "en";
+  setLanguage(savedLang);
+})();
+
+// Toggle click
+langToggle.addEventListener("click", () => {
+  const current = document.documentElement.lang;
+  const newLang = current === "en" ? "ar" : "en";
+  setLanguage(newLang);
+});

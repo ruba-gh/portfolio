@@ -3,11 +3,12 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Ruba's Portfolio</title>
+  <title data-i18n="meta.title">Ruba's Portfolio</title>
 
   <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@600;700;800&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700;800&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
 
   <link rel="stylesheet" href="css/00-root.css" />
@@ -19,8 +20,8 @@
   <link rel="stylesheet" href="css/07-responsive.css" />
 
   <link rel="icon" href="assets/favicon.png" type="image/png" sizes="32x32">
-<link rel="icon" href="assets/favicon.png" type="image/png" sizes="16x16">
-<link rel="apple-touch-icon" href="assets/favicon.png" sizes="180x180">
+  <link rel="icon" href="assets/favicon.png" type="image/png" sizes="16x16">
+  <link rel="apple-touch-icon" href="assets/favicon.png" sizes="180x180">
 </head>
 
 <body>
@@ -29,23 +30,23 @@
     <!-- NAV -->
     <header class="navWrap reveal" data-delay="1">
       <nav class="navPill" aria-label="Primary">
-        <button class="langBtn" type="button">EN</button>
+        <button class="langBtn" id="langToggle" type="button">AR</button>
 
         <div class="logoBubble" aria-label="Logo">
           <img
-  class="footerLogoImg"
-  src="assets/logo.png"
-  alt="Logo"
-  width="48"
-  height="48"
-  decoding="async"
-/>
+            class="footerLogoImg"
+            src="assets/logo.png"
+            alt="Logo"
+            width="48"
+            height="48"
+            decoding="async"
+          />
         </div>
 
         <div class="navLinks" role="navigation">
-          <a class="navLink" href="#home">Home</a>
-          <a class="navLink" href="#about">About</a>
-          <a class="navLink" href="#projects">Projects</a>
+          <a class="navLink" href="#home" data-i18n="nav.home">Home</a>
+          <a class="navLink" href="#about" data-i18n="nav.about">About</a>
+          <a class="navLink" href="#projects" data-i18n="nav.projects">Projects</a>
         </div>
       </nav>
     </header>
@@ -53,20 +54,19 @@
     <!-- HERO -->
     <main class="hero" id="home">
       <section class="heroText reveal" data-delay="1">
-        <p class="smallHi">Hi I am</p>
-        <p class="name">Ruba Alghamdi</p>
+        <p class="smallHi" data-i18n="hero.hi">Hi I am</p>
+
+        <!-- Optional: translate name if you want -->
+        <p class="name" data-i18n="hero.name">Ruba Alghamdi</p>
 
         <h1 class="title">
-          UI &amp; UX<br />
-          <span>Designer</span>
+          <span data-i18n="hero.titleTop">UI &amp; UX</span><br />
+          <span data-i18n="hero.titleBottom">Designer</span>
         </h1>
 
-        <p class="desc">
-          I design clean, friendly digital experiences and bring them to life with front-end code.
-          I care about accessibility, smooth interactions, and modern web/app UI.
+        <p class="desc" data-i18n="hero.desc">
+          I design clean, friendly digital experiences and bring them to life with front-end code. I care about accessibility, smooth interactions, and modern web/app UI.
         </p>
-
-        <!--<a class="cta" href="#projects">Hire Me</a>-->
       </section>
 
       <section class="heroArt reveal" data-delay="2">
@@ -88,7 +88,7 @@
               <div class="crescent" aria-hidden="true"></div>
             </div>
 
-            <p class="toggleHint"></p>
+            <p class="toggleHint" data-i18n="hero.toggleHint">Click</p>
           </div>
         </div>
       </section>
@@ -99,35 +99,37 @@
       <div class="aboutGrid">
 
         <div class="aboutLeft reveal" data-delay="1">
-          <h2 class="sectionTitle">About Me</h2>
+          <h2 class="sectionTitle" data-i18n="about.title">About Me</h2>
 
-          <p class="aboutText">
+          <p class="aboutText" data-i18n="about.text">
             I’m Ruba, a Computer Science graduate based in Saudi Arabia.
             I work across UI/UX, prototyping, and front-end implementation.
             I enjoy building calm, clear experiences.
           </p>
 
-          <a class="cta cvBtn" href="assets/RubaAlghamdiCV.pdf" download>Download CV</a>
+          <a class="cta cvBtn" href="assets/RubaAlghamdiCV.pdf" download data-i18n="about.cv">
+            Download CV
+          </a>
         </div>
 
         <div class="aboutRight">
           <div class="skill reveal" data-delay="1">
-            <p class="skillLabel">UX / UI</p>
+            <p class="skillLabel" data-i18n="skills.uiux">UX / UI</p>
             <div class="bar"><span class="fill" data-level="100"></span></div>
           </div>
 
           <div class="skill reveal" data-delay="2">
-            <p class="skillLabel">Web Developer</p>
+            <p class="skillLabel" data-i18n="skills.web">Web Developer</p>
             <div class="bar"><span class="fill" data-level="82"></span></div>
           </div>
 
           <div class="skill reveal" data-delay="3">
-            <p class="skillLabel">App Design</p>
+            <p class="skillLabel" data-i18n="skills.app">App Design</p>
             <div class="bar"><span class="fill" data-level="92"></span></div>
           </div>
 
           <div class="skill reveal" data-delay="4">
-            <p class="skillLabel">Graphic Design</p>
+            <p class="skillLabel" data-i18n="skills.graphic">Graphic Design</p>
             <div class="bar"><span class="fill" data-level="100"></span></div>
           </div>
         </div>
@@ -138,15 +140,16 @@
     <!-- PROJECTS -->
     <section class="projects" id="projects">
       <div class="projectsHead reveal">
-        <h2 class="sectionTitle center">My Projects</h2>
-        <p class="projectsSub">
+        <h2 class="sectionTitle center" data-i18n="projects.title">My Projects</h2>
+
+        <p class="projectsSub" data-i18n="projects.sub">
           Selected work across UI/UX, app concepts, and visual systems.
         </p>
 
         <div class="filters" role="tablist" aria-label="Project Filters">
-          <button class="pill isActive" data-filter="all" type="button">All</button>
-          <button class="pill" data-filter="web" type="button">Web</button>
-          <button class="pill" data-filter="app" type="button">App</button>
+          <button class="pill isActive" data-filter="all" type="button" data-i18n="projects.filter.all">All</button>
+          <button class="pill" data-filter="web" type="button" data-i18n="projects.filter.web">Web</button>
+          <button class="pill" data-filter="app" type="button" data-i18n="projects.filter.app">App</button>
         </div>
       </div>
 
@@ -157,8 +160,8 @@
           </div>
           <div class="cardBar">
             <div class="cardInfo">
-              <h3 class="cardTitle">Login/Signup</h3>
-              <p class="cardDesc">Login screens + onboarding concept.</p>
+              <h3 class="cardTitle" data-i18n="projects.cards.p1.title">Login/Signup</h3>
+              <p class="cardDesc" data-i18n="projects.cards.p1.desc">Login screens + onboarding concept.</p>
             </div>
           </div>
         </article>
@@ -169,8 +172,8 @@
           </div>
           <div class="cardBar">
             <div class="cardInfo">
-              <h3 class="cardTitle">Card Match Game</h3>
-              <p class="cardDesc">Minimal card matching game UI.</p>
+              <h3 class="cardTitle" data-i18n="projects.cards.p2.title">Card Match Game</h3>
+              <p class="cardDesc" data-i18n="projects.cards.p2.desc">Minimal card matching game UI.</p>
             </div>
           </div>
         </article>
@@ -181,8 +184,8 @@
           </div>
           <div class="cardBar">
             <div class="cardInfo">
-              <h3 class="cardTitle">Bakery App</h3>
-              <p class="cardDesc">Creative Bakery app UX/UI.</p>
+              <h3 class="cardTitle" data-i18n="projects.cards.p3.title">Bakery App</h3>
+              <p class="cardDesc" data-i18n="projects.cards.p3.desc">Creative Bakery app UX/UI.</p>
             </div>
           </div>
         </article>
@@ -192,22 +195,21 @@
     <!-- FOOTER -->
     <footer class="siteFooter reveal">
       <div class="footerInner">
-        <p class="footerLeft">Ruba Alghamdi</p>
+        <p class="footerLeft" data-i18n="footer.name">Ruba Alghamdi</p>
 
         <div class="footerLogo" aria-label="Logo">
           <img
-  class="footerLogoImg"
-  src="assets/logo.png"
-  alt="Logo"
-  width="48"
-  height="48"
-  decoding="async"
-/>
+            class="footerLogoImg"
+            src="assets/logo.png"
+            alt="Logo"
+            width="48"
+            height="48"
+            decoding="async"
+          />
         </div>
 
         <div class="footerIcons">
           <a class="iconBtn" href="mailto:rub.gmd23@gmail.com" aria-label="Email">
-            <!-- email icon -->
             <svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true">
               <path fill="currentColor" d="M20 4H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2zm0 4-8 5L4 8V6l8 5 8-5v2z"/>
             </svg>
