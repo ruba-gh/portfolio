@@ -168,6 +168,8 @@ const translations = {
     "projects.cards.p2.desc": "Minimal card matching game UI.",
     "projects.cards.p3.title": "Bakery App",
     "projects.cards.p3.desc": "Creative Bakery app UX/UI.",
+    "projects.cards.p4.title": "Timer App",
+    "projects.cards.p4.desc": "Fun simple timer UX/UI.",
 
     // footer
     "footer.name": "Ruba Alghamdi"
@@ -216,6 +218,8 @@ const translations = {
     "projects.cards.p2.desc": "واجهة لعبة مطابقة بسيطة.",
     "projects.cards.p3.title": "تطبيق مخبز",
     "projects.cards.p3.desc": "تجربة وتصميم واجهات لتطبيق مخبز.",
+    "projects.cards.p4.title": "تطبيق المؤقت",
+    "projects.cards.p4.desc": "تجربة وتصميم واجهات لتطبيق مؤقت بسيط وممتع.",
 
     // footer
     "footer.name": "ربى الغامدي"
