@@ -166,9 +166,9 @@ const translations = {
     "projects.cards.p1.desc": "Login screens + onboarding concept.",
     "projects.cards.p2.title": "Card Match Game",
     "projects.cards.p2.desc": "Minimal card matching game UI.",
-    "projects.cards.p3.title": "Bakery App",
+    "projects.cards.p3.title": "Bakery shop",
     "projects.cards.p3.desc": "Creative Bakery app UX/UI.",
-    "projects.cards.p4.title": "Timer App",
+    "projects.cards.p4.title": "Frog Timer",
     "projects.cards.p4.desc": "Fun simple timer UX/UI.",
 
     // footer
