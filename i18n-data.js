@@ -26,30 +26,38 @@ window.TRANSLATIONS = {
     "projects.filter.web": "Web",
     "projects.filter.app": "App",
 
-    // ✅ Updated Projects (EN)
     "projects.cards.p1.title": "Mobile Authentication Experience",
     "projects.cards.p1.desc": "Onboarding and login flow.",
+    "projects.cards.p1.alt": "Mobile authentication screens",
 
     "projects.cards.p2.title": "Card Match Game UI",
     "projects.cards.p2.desc": "Minimal memory game interface.",
+    "projects.cards.p2.alt": "Card match game interface screens",
 
     "projects.cards.p3.title": "Bakery Shopping App UI",
     "projects.cards.p3.desc": "Mobile dessert ordering interface.",
+    "projects.cards.p3.alt": "Bakery shopping app screens",
 
     "projects.cards.p4.title": "Frog Focus Timer",
     "projects.cards.p4.desc": "Playful productivity timer.",
-
-    // ✅ Updated alts (EN)
-    "projects.cards.p1.alt": "Mobile authentication screens",
-    "projects.cards.p2.alt": "Card match game interface screens",
-    "projects.cards.p3.alt": "Bakery shopping app screens",
     "projects.cards.p4.alt": "Frog focus timer screens",
 
-    "footer.name": "Ruba Alghamdi"
+    "footer.name": "Ruba Alghamdi",
+
+    "project.back": "Back to Projects",
+"project.label": "Project",
+"project.prev": "Previous image",
+"project.next": "Next image",
+"project.notFound": "Project not found",
+"project.notFoundDesc": "The project you are looking for does not exist.",
+
+"projects.details.p1": "A mobile authentication concept focused on a smooth and friendly onboarding and login experience. The design keeps the flow simple, clear, and easy to follow.",
+"projects.details.p2": "A minimal memory game interface designed to keep the user focused on play while maintaining a clean structure, clear feedback, and balanced visual rhythm.",
+"projects.details.p3": "A bakery shopping app concept that presents desserts in a warm and inviting way, making browsing and ordering feel light, visual, and intuitive.",
+"projects.details.p4": "A playful focus timer built around a frog character to make productivity feel softer and more enjoyable while still keeping the interface clear and usable."
   },
 
   ar: {
-    // ✅ Less-literal Arabic (more natural)
     "meta.title": "بورتفوليو ربى",
     "nav.home": "الرئيسية",
     "nav.about": "عنّي",
@@ -77,40 +85,34 @@ window.TRANSLATIONS = {
     "projects.filter.web": "ويب",
     "projects.filter.app": "تطبيقات",
 
-    // ✅ Updated Projects (AR) — not literal
     "projects.cards.p1.title": "تجربة توثيق دخول للجوال",
     "projects.cards.p1.desc": "مسار تعريفي وتسجيل دخول بشكل سلس.",
+    "projects.cards.p1.alt": "شاشات تسجيل الدخول والتعريف",
 
     "projects.cards.p2.title": "واجهة لعبة تطابق البطاقات",
     "projects.cards.p2.desc": "واجهة خفيفة للعبة ذاكرة بسيطة.",
+    "projects.cards.p2.alt": "شاشات واجهة لعبة تطابق البطاقات",
 
     "projects.cards.p3.title": "واجهة تطبيق تسوّق للحلويات",
     "projects.cards.p3.desc": "تجربة طلب حلويات من الجوال.",
+    "projects.cards.p3.alt": "شاشات تطبيق تسوّق الحلويات",
 
     "projects.cards.p4.title": "مؤقّت تركيز الضفدع",
     "projects.cards.p4.desc": "مؤقّت إنتاجية لطيف بروح مرحة.",
-
-    // ✅ Updated alts (AR)
-    "projects.cards.p1.alt": "شاشات تسجيل الدخول والتعريف",
-    "projects.cards.p2.alt": "شاشات واجهة لعبة تطابق البطاقات",
-    "projects.cards.p3.alt": "شاشات تطبيق تسوّق الحلويات",
     "projects.cards.p4.alt": "شاشات مؤقّت تركيز الضفدع",
 
-    "footer.name": "ربى الغامدي"
-  },
+    "footer.name": "ربى الغامدي",
 
-// Add under your projects card keys:
+    "project.back": "العودة للمشاريع",
+"project.label": "مشروع",
+"project.prev": "الصورة السابقة",
+"project.next": "الصورة التالية",
+"project.notFound": "المشروع غير موجود",
+"project.notFoundDesc": "المشروع الذي تبحث عنه غير موجود.",
 
-// EN
-"projects.cards.p1.alt": "Sarf Wallet screens",
-"projects.cards.p2.alt": "Book App screens",
-"projects.cards.p3.alt": "Portfolio screens",
-"projects.cards.p4.alt": "Portfolio screens",
-
-// AR (examples)
-"projects.cards.p1.alt": "شاشات محفظة صرف",
-"projects.cards.p2.alt": "شاشات تطبيق الكتب",
-"projects.cards.p3.alt": "شاشات المشروع",
-"projects.cards.p4.alt": "شاشات المشروع",
-
+"projects.details.p1": "فكرة لتجربة توثيق دخول على الجوال تركّز على بداية سلسة وواضحة للمستخدم، مع اهتمام ببساطة التنقل ووضوح الخطوات.",
+"projects.details.p2": "واجهة لعبة ذاكرة بسيطة تحافظ على تركيز المستخدم على اللعب نفسه مع تنظيم بصري واضح وإيقاع هادئ ومتوازن.",
+"projects.details.p3": "فكرة لتطبيق تسوّق حلويات يعرض المنتجات بطريقة دافئة وجذابة ويجعل التصفّح والطلب تجربة لطيفة وسهلة.",
+"projects.details.p4": "مؤقّت تركيز بطابع ضفدع مرح يضيف روحاً لطيفة للتجربة مع الحفاظ على الوضوح وسهولة الاستخدام."
+  }
 };

@@ -90,3 +90,27 @@
   font-size: 14px;
   line-height: 1.6;
 }
+.projectCardLink{
+  display: block;
+  text-decoration: none;
+  color: inherit;
+}
+
+.projectGalleryBtn.prev{
+  left: 12px;
+  right: auto;
+}
+
+.projectGalleryBtn.next{
+  right: 12px;
+  left: auto;
+}
+html[dir="rtl"] .projectGalleryBtn.prev{
+  left: 12px;
+  right: auto;
+}
+
+html[dir="rtl"] .projectGalleryBtn.next{
+  right: 12px;
+  left: auto;
+}

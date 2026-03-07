@@ -1,0 +1,246 @@
+
+.projectPage{
+  padding: 56px 0 90px;
+}
+
+.projectPageLayout{
+  display: grid;
+  grid-template-columns: minmax(280px, 430px) minmax(0, 1fr);
+  gap: clamp(28px, 5vw, 72px);
+  align-items: center;
+}
+
+/* gallery side */
+.projectPageGallery{
+  width: 100%;
+}
+
+.projectGalleryCard{
+  position: relative;
+  border-radius: 28px;
+  border: 1px solid var(--border);
+  background: linear-gradient(
+    180deg,
+    color-mix(in srgb, var(--pink-1) 45%, transparent),
+    color-mix(in srgb, var(--card) 92%, transparent)
+  );
+  padding: 20px 18px 16px;
+  box-shadow: 0 16px 36px rgba(0,0,0,.06);
+}
+
+.projectGalleryViewport{
+  min-height: 420px;
+  display: grid;
+  place-items: center;
+  overflow: hidden;
+  border-radius: 22px;
+}
+
+.projectGalleryImage{
+  width: 100%;
+  max-width: 320px;
+  max-height: 420px;
+  object-fit: contain;
+  display: block;
+  filter: drop-shadow(0 14px 24px rgba(0,0,0,.12));
+}
+
+.projectGalleryBtn{
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 42px;
+  height: 42px;
+  border: 0;
+  border-radius: 999px;
+  background: var(--pink-2);
+  color: #fff;
+  font-size: 24px;
+  cursor: pointer;
+  display: grid;
+  place-items: center;
+  box-shadow: 0 10px 18px rgba(255,95,184,.24);
+}
+
+.projectGalleryBtn.prev{ left: 10px; }
+.projectGalleryBtn.next{ right: 10px; }
+
+.projectGalleryDots{
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 16px;
+  flex-wrap: wrap;
+}
+
+.projectGalleryDot{
+  width: 10px;
+  height: 10px;
+  border-radius: 999px;
+  border: 0;
+  background: color-mix(in srgb, var(--pink-2) 28%, transparent);
+  cursor: pointer;
+}
+
+.projectGalleryDot.isActive{
+  background: var(--pink-2);
+  transform: scale(1.12);
+}
+
+/* text side */
+.projectPageInfo{
+  max-width: 700px;
+}
+
+.projectBackBtn{
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  min-height: 48px;
+  padding: 0 18px;
+  margin-bottom: 28px;
+  border-radius: 999px;
+  border: 1px solid var(--border);
+  background: color-mix(in srgb, var(--pink-1) 72%, transparent);
+  color: var(--text);
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 15px;
+  transition: transform .18s ease, background-color .18s ease, box-shadow .18s ease;
+}
+
+.projectBackBtn::before{
+  content: "←";
+  font-size: 16px;
+  line-height: 1;
+}
+
+html[dir="rtl"] .projectBackBtn::before{
+  content: "→";
+}
+
+.projectBackBtn:hover{
+  transform: translateY(-2px);
+  background: color-mix(in srgb, var(--pink-2) 10%, var(--pink-1));
+  box-shadow: 0 10px 20px rgba(255,95,184,.14);
+}
+
+.projectPageEyebrow{
+  margin: 0 0 10px;
+  color: var(--pink-2);
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+}
+
+.projectPageTitle{
+  margin: 0 0 18px;
+  font-size: clamp(34px, 5vw, 62px);
+  line-height: 1.05;
+  letter-spacing: -.8px;
+  font-family: var(--font-display-en);
+}
+
+html[dir="rtl"] .projectPageTitle{
+  font-family: var(--font-display-ar);
+}
+
+.projectPageDesc{
+  margin: 0;
+  color: var(--muted);
+  font-size: 18px;
+  line-height: 1.9;
+  font-weight: 300;
+  max-width: 760px;
+}
+
+.projectGalleryCard{
+  position: relative;
+  direction: ltr;
+}
+
+.projectGalleryBtn{
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 42px;
+  height: 42px;
+  border: 0;
+  border-radius: 999px;
+  background: var(--pink-2);
+  color: #fff;
+  font-size: 24px;
+  cursor: pointer;
+  display: grid;
+  place-items: center;
+  box-shadow: 0 10px 18px rgba(255,95,184,.24);
+  direction: ltr;
+}
+
+.projectGalleryBtn.prev{
+  left: 10px;
+  right: auto;
+}
+
+.projectGalleryBtn.next{
+  right: 10px;
+  left: auto;
+}
+
+/* responsive */
+@media (max-width: 950px){
+  .projectPageLayout{
+    grid-template-columns: 1fr;
+    gap: 28px;
+    align-items: start;
+  }
+
+  .projectPageGallery{
+    max-width: 460px;
+  }
+
+  .projectGalleryViewport{
+    min-height: 340px;
+  }
+
+  .projectGalleryImage{
+    max-width: 260px;
+    max-height: 320px;
+  }
+}
+
+@media (max-width: 600px){
+  .projectPage{
+    padding: 36px 0 72px;
+  }
+
+  .projectPageTitle{
+    font-size: clamp(28px, 8vw, 40px);
+  }
+
+  .projectPageDesc{
+    font-size: 15px;
+    line-height: 1.8;
+  }
+
+  .projectBackBtn{
+    min-height: 44px;
+    padding: 0 16px;
+    font-size: 14px;
+  }
+
+  .projectGalleryCard{
+    padding: 16px 14px 14px;
+  }
+
+  .projectGalleryViewport{
+    min-height: 280px;
+  }
+
+  .projectGalleryImage{
+    max-width: 210px;
+    max-height: 250px;
+  }
+}
+

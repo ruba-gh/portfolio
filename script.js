@@ -18,9 +18,10 @@ function renderProjects() {
   grid.innerHTML = projects
     .map(
       (p) => `
-    <article class="projectCard reveal"
-             data-delay="${p.delay ?? 1}"
-             data-cat="${p.cat ?? "all"}">
+    <a class="projectCard reveal projectCardLink"
+       href="project.html?id=${p.id}"
+       data-delay="${p.delay ?? 1}"
+       data-cat="${p.cat ?? "all"}">
       <div class="cardTop">
         <img class="projectImg"
              src="${p.img}"
@@ -33,7 +34,7 @@ function renderProjects() {
           <p class="cardDesc" data-i18n="${p.descKey}"></p>
         </div>
       </div>
-    </article>
+    </a>
   `
     )
     .join("");
