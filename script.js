@@ -45,7 +45,7 @@ function renderProjects() {
 ========================= */
 function initProjectFilter() {
   const filterButtons = document.querySelectorAll(".pill");
-  const cards = document.querySelectorAll(".projectCard");
+  if (!filterButtons.length) return;
 
   filterButtons.forEach((button) => {
     button.addEventListener("click", () => {
@@ -53,11 +53,12 @@ function initProjectFilter() {
       button.classList.add("isActive");
 
       const filter = button.dataset.filter;
+      const cards = document.querySelectorAll(".projectCard");
 
       cards.forEach((card) => {
         const category = card.dataset.cat;
         const shouldShow = filter === "all" || category === filter;
-        card.hidden = !shouldShow;
+        card.style.display = shouldShow ? "" : "none";
       });
     });
   });
