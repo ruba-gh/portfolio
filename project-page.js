@@ -81,6 +81,7 @@ function renderDetailProject() {
   const descEl = document.getElementById("projectDesc");
   const galleryImage = document.getElementById("galleryImage");
   const dotsWrap = document.getElementById("galleryDots");
+  const figmaBtn = document.getElementById("figmaBtn");
 
   const projects = window.PROJECTS || [];
   const project = projects.find((p) => p.id === detailProjectId);
@@ -88,7 +89,9 @@ function renderDetailProject() {
   if (!project) {
     titleEl.textContent = detailT("project.notFound");
     descEl.textContent = detailT("project.notFoundDesc");
+
     if (galleryImage) galleryImage.style.display = "none";
+    if (figmaBtn) figmaBtn.style.display = "none";
     return;
   }
 
@@ -98,6 +101,17 @@ function renderDetailProject() {
   descEl.textContent = detailT(project.detailsKey);
 
   document.title = `${detailT(project.titleKey)} | ${detailT("meta.title")}`;
+
+  if (figmaBtn) {
+    if (project.figma) {
+      figmaBtn.href = project.figma;
+      figmaBtn.target = "_blank";
+      figmaBtn.rel = "noopener noreferrer";
+      figmaBtn.style.display = "inline-flex";
+    } else {
+      figmaBtn.style.display = "none";
+    }
+  }
 
   const images = project.gallery?.length ? project.gallery : [project.img];
   if (detailState.currentIndex >= images.length) detailState.currentIndex = 0;
@@ -176,3 +190,4 @@ document.addEventListener("keydown", (e) => {
   renderDetailProject();
   detailInitReveal();
 })();
+

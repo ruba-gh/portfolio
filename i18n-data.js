@@ -26,7 +26,7 @@ window.TRANSLATIONS = {
     "projects.filter.web": "Web",
     "projects.filter.app": "App",
 
-    "projects.cards.p1.title": "Mobile Authentication Experience",
+    "projects.cards.p1.title": "Authentication Experience",
     "projects.cards.p1.desc": "Onboarding and login flow.",
     "projects.cards.p1.alt": "Mobile authentication screens",
 
@@ -43,6 +43,7 @@ window.TRANSLATIONS = {
     "projects.cards.p4.alt": "Frog focus timer screens",
 
     "footer.name": "Ruba Alghamdi",
+    "figmaBtn": "View on Figma",
 
     "project.back": "Back to Projects",
 "project.label": "Project",
@@ -55,7 +56,8 @@ window.TRANSLATIONS = {
 "projects.details.p2": "A minimal memory game interface designed to keep the user focused on play while maintaining a clean structure, clear feedback, and balanced visual rhythm.",
 "projects.details.p3": "A bakery shopping app concept that presents desserts in a warm and inviting way, making browsing and ordering feel light, visual, and intuitive.",
 "projects.details.p4": "A playful focus timer built around a frog character to make productivity feel softer and more enjoyable while still keeping the interface clear and usable."
-  },
+
+},
 
   ar: {
     "meta.title": "بورتفوليو ربى",
@@ -102,6 +104,7 @@ window.TRANSLATIONS = {
     "projects.cards.p4.alt": "شاشات مؤقّت تركيز الضفدع",
 
     "footer.name": "ربى الغامدي",
+    "figmaBtn": "عرض على فيجما",
 
     "project.back": "العودة للمشاريع",
 "project.label": "مشروع",

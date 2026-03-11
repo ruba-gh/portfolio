@@ -249,3 +249,4 @@ function initLanguage() {
   // 6) Skill bars observer
   initSkillBars();
 })();
+

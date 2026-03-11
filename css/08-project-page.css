@@ -97,6 +97,7 @@
   align-items: center;
   gap: 10px;
   min-height: 48px;
+  width: max-content;
   padding: 0 18px;
   margin-bottom: 28px;
   border-radius: 999px;
@@ -244,3 +245,21 @@ html[dir="rtl"] .projectPageTitle{
   }
 }
 
+.cvBtn{ padding: 0 40px; }
+
+.cta{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  height:44px;
+  margin-top: 30px;
+  padding:0 54px;
+  border-radius:999px;
+  background:var(--pink-2);
+  color:#fff;
+  text-decoration:none;
+  font-weight:600;
+  box-shadow:0 12px 24px rgba(255,95,184,.25);
+  transition:transform .15s ease, filter .15s ease;
+}
+.cta:hover{ transform:translateY(-2px); filter:brightness(.98); }

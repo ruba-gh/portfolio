@@ -8,6 +8,7 @@ window.PROJECTS = [
     titleKey: "projects.cards.p1.title",
     descKey: "projects.cards.p1.desc",
     detailsKey: "projects.details.p1",
+    figma: "https://www.figma.com/proto/IdQZWJLPUnZfKSnx2oz9da/hilow",
     delay: 1
   },
   {
@@ -19,6 +20,7 @@ window.PROJECTS = [
     titleKey: "projects.cards.p2.title",
     descKey: "projects.cards.p2.desc",
     detailsKey: "projects.details.p2",
+    figma: "https://www.figma.com/proto/XCV4xGvHEXoIChgjCQu8rz/card-match",
     delay: 2
   },
   {
@@ -30,6 +32,7 @@ window.PROJECTS = [
     titleKey: "projects.cards.p3.title",
     descKey: "projects.cards.p3.desc",
     detailsKey: "projects.details.p3",
+    figma: "https://www.figma.com/proto/hfAOG7XHDB41ZZp127LxvC/bakery-shop",
     delay: 3
   },
   {
@@ -41,6 +44,7 @@ window.PROJECTS = [
     titleKey: "projects.cards.p4.title",
     descKey: "projects.cards.p4.desc",
     detailsKey: "projects.details.p4",
+    figma: "https://www.figma.com/proto/L5vAc0dqdOeNUdmeZUI0eZ/frog-timer",
     delay: 4
   }
 ];
